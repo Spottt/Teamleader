@@ -972,11 +972,11 @@ class Teamleader
         $fields['date_to'] = date('d/m/Y', $dateTo);
 
         if ($contactOrCompany !== null) {
-            switch (gettype($contactOrCompany)) {
-                case 'Contact':
+            switch (get_class($contactOrCompany)) {
+                case 'SumoCoders\Teamleader\Crm\Contact':
                     $fields['contact_or_Company'] = 'contact';
                     break;
-                case 'Company':
+                case 'SumoCoders\Teamleader\Crm\Company':
                     $fields['contact_or_Company'] = 'company';
                     break;
                 default:
@@ -1116,11 +1116,11 @@ class Teamleader
         $fields['date_to'] = date('d/m/Y', $dateTo);
 
         if ($contactOrCompany !== null) {
-            switch (gettype($contactOrCompany)) {
-                case 'Contact':
+            switch (get_class($contactOrCompany)) {
+                case 'SumoCoders\Teamleader\Crm\Contact':
                     $fields['contact_or_Company'] = 'contact';
                     break;
-                case 'Company':
+                case 'SumoCoders\Teamleader\Crm\Contact':
                     $fields['contact_or_Company'] = 'company';
                     break;
                 default:
